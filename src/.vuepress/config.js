@@ -1,6 +1,6 @@
 module.exports = {
   base: '/blog/',
-  dest: 'docs',
+  dest: 'blog',
   title:'可爱的许荻荻',
   description:'学习吗？一起呗～',
   head:[

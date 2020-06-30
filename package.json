@@ -8,7 +8,7 @@
     "pd": "npm run pb && npm run pc",
     "pp": "git reset --hard && git pull && npm install",
     "pc": "git add . && git commit -m 'deploy' && git push",
-    "pb": "rm -rf docs && vuepress build src"
+    "pb": "rm -rf blog && vuepress build src"
   },
   "keywords": [],
   "author": "",

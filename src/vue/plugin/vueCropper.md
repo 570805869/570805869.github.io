@@ -1,6 +1,27 @@
-## 图片裁剪
+---
+title: Vue-图片裁剪插件-vue-cropper
+date: 2020-06-12
+categories:
+ - Vue
+tags:
+ - Vue-plugins
+---
 
 > 向原作者致敬 附上链接 https://github.com/xyxiao001/vue-cropper
+
+目标效果：<br>
+- 点击上传logo<br>
+<img src="./img/2.png" style="width: 80%;"><br>
+
+- 弹出文件选择框，选择文件后<br>
+<img src="./img/3.png" style="width: 100%;"><br>
+
+- 显示图片裁剪弹框<br>
+<img src="./img/1.png" style="width: 80%;"><br>
+如图所示，这是目前实现的效果。<br>
+
+说明：<br>
+图片上传采用了element-ui的组件upload，图片裁剪用的cropper，两者相结合，最终实现效果。
 
 安装
 ```js
@@ -58,10 +79,12 @@ components: {
       :style="{
         'width': previews.w + 'px !important',
         'height': previews.h + 'px',
-        'transform': 'scale(' + 160/previews.w + ',' + 96/previews.h + ') ',
+        'transform':`scale(calc(160 / ${previews.w}),calc(92 / ${previews.h}))`,
         'top': viewPosition,
         'left': viewPosition
-    }">
+      }"
+      style="transform-origin:0 0"
+    >
     <img :src="option.img" :style="previews.img">
   </div>
 </div>
@@ -94,19 +117,27 @@ methods:{
   // 实时预览函数
   realTime(data) {
     this.previews = data;
-    this.viewPosition = `${(110 - this.previews.h) / 2}px`;
   },
   //  确定裁剪输出的区域
   handleImg() {
     this.$refs.cropper.getCropData((data) => {
-      let newFile = convertBase64UrlToBlob(data);
+      let newFile = this.convertBase64UrlToBlob(data); // 将base64格式转为blob 可以通过formdata传给后台的文件格式 
       this.$emit('handleClose', 'reUpload', newFile);
     })
   },
+  convertBase64UrlToBlob(dataurl, filename = 'file') {
+    let arr = dataurl.split(',')
+    let mime = arr[0].match(/:(.*?);/)[1]
+    let suffix = mime.split('/')[1]
+    let bstr = atob(arr[1])
+    let n = bstr.length
+    let u8arr = new Uint8Array(n)
+    while (n--) {
+      u8arr[n] = bstr.charCodeAt(n)
+    }
+    return new File([u8arr], `${filename}.${suffix}`, {
+      type: mime
+    })
+  }
 }
 ```
-<!-- 
-https://blog.csdn.net/hbjiankely/article/details/85268608
-https://www.jianshu.com/p/36ca45c6b497
-https://shnhz.github.io/shn-ui/#/component/vue-cropper
-https://blog.csdn.net/qq_45740103/article/details/105207301?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159245992019724845057883%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=159245992019724845057883&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v2-1-105207301.first_rank_ecpm_v3_pc_rank_v2&utm_term=vueCropper+%E5%AE%9E%E6%97%B6%E9%A2%84%E8%A7%88+%E6%9C%89%E5%81%8F%E7%A7%BB -->

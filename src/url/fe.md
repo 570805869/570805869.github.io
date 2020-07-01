@@ -1,7 +1,12 @@
 ---
-sidebar: auto
+title: 常用网址
+date: 2020-06-01
+categories:
+ - 基础
+tags:
+ - 基础
 ---
-# 常用网址
+
 ## 一些教程
 - [支付宝前端九部](https://www.yuque.com/fe9/basic)
 - [MDN](https://developer.mozilla.org/es/)

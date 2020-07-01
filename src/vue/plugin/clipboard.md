@@ -1,4 +1,11 @@
-# 一键复制功能
+---
+title: Vue-一键复制功能插件-clipboard
+date: 2020-06-11
+categories:
+ - Vue
+tags:
+ - Vue-plugins
+---
 
 ### 第一步-下载
 ```js

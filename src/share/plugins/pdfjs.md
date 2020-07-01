@@ -1,4 +1,11 @@
-# Pdf.js 的使用
+---
+title: Pdf.js插件的使用
+date: 2020-05-01
+categories:
+ - 插件
+tags:
+ - 插件
+---
 
 目的：使用Pdf.js预览pdf并隐藏下载，打印，注视ctrl+s下载功能，及设置默认页面显示内容尺寸。
 + [现成demo](https://github.com/570805869/pdfJs) <br>

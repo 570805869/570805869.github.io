@@ -1,10 +1,10 @@
 ---
-title: 截图
+title: Vue-截图插件-html2canvas
 date: 2020-06-10
 categories:
- - vue
+ - Vue
 tags:
- - vue-plugins
+ - Vue-plugins
 ---
 
 > 向作者致敬,附上官网地址 http://html2canvas.hertzen.com/

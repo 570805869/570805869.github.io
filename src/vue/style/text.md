@@ -1,4 +1,11 @@
-# vue-风格指南
+---
+title: Vue-风格指南
+date: 2020-06-06
+categories:
+ - Vue
+tags:
+ - Vue
+---
 > vue风格指南: 为了回避错误、小纠结和反模式.(理解：一份vue的规范)<br>
 
 [vue风格指南官方文档](https://cn.vuejs.org/v2/style-guide/#%E8%A7%84%E5%88%99%E5%BD%92%E7%B1%BB)

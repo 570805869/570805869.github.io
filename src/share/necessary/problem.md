@@ -1,4 +1,11 @@
-# 日常问题
+---
+title: 日常问题
+date: 2020-07-03
+categories:
+ - 基础
+tags:
+ - 基础
+---
 
 ## 1.cookie的域
 
@@ -88,3 +95,35 @@ Cookies.remove('name');
 
 这种就是不对的，将文件放到服务器上运行！<br>
 当然还有另一种方法，本地的话chrome不行，用其他浏览器调试吧。我用了火狐，一切ok，最后推测，chorm也ok。
+
+
+## 3.npm安装模块遇到ENOENT: no such file or directory, rename错误
+
+- 在做scratch 3.0二次开发，在scratch-vm文件夹下进行npm link 的环节中，一直在报这个错误
+- 找了很多地方，感觉这个是最靠谱的，
+- 删除了项目中的package-lock.json 之后就真的没有报过了，
+
++ [原文地址](https://blog.csdn.net/u012878073/article/details/86511957)
+
+## 4.npm安装模块遇到ENOENT: no such file or directory, access错误
+<img src="./img/1.png" style="width: 100%;"><br>
+```js
+path /Users/xudier/wecode/bfe_react_scratch/scratch-vm/node_modules/_@babel_highlight@7.10.4@@babel/highlight/node_modules/js-tokens
+npm ERR! code ENOENT
+npm ERR! errno -2
+npm ERR! syscall access
+npm ERR! enoent ENOENT: no such file or directory, access '/Users/xudier/wecode/bfe_react_scratch/scratch-vm/node_modules/_@babel_highlight@7.10.4@@babel/highlight/node_modules/js-tokens'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/xudier/.npm/_logs/2020-07-03T06_16_23_041Z-debug.log
+```
+
+- 大部分类似与这种的问题，我们可以首先找到关键字，看看他是node_modules下面的哪个包找不到
+- 代码中所示js-tokens，是这个，于是乎我们可以来到这个网站
+
++ [npm](https://www.npmjs.com/)<br>
+
+- 找到后通过命令下载，我一般会用cnpm，npm经常会报错。
+- 再重新执行那个会报错的命令，可以看看问题有没有解决

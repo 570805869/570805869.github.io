@@ -76,4 +76,50 @@ coding中遇到的问题：<br>
 这样不管你屏幕怎么滚动，他都始终在这里。只是属于比较笨的方法，因为写了重复代码<br>
 在没有找到新的解决思路之前，可能会保持这个状态<br>
 
+## 开发过程中遇到这样一个问题
+### <b>html2canvas 在ios13.4.1系统中不生效</b><br>
 
+问题描述：最近在开发 html2canvas 的时候，突然发现，html2canvas在IOS13.4.1系统中调用失败。后马上去github上查看是否有同道中人遇到类似问题。
+
+<img src="./img/4.png" style="width: 100%;">
+
+解决方案：<br>
+
+- 1.首先将 package.json 中的 html2canvas 版本降低为【1.0.0-rc.4】<br>
+  版本降低方法<br>
+  首先移除 html2canvas 【npm uninstall html2canvas】<br>
+  然后安装指定版本 【npm install --save html2canvas@1.0.0-rc.4】<br>
+  > npm不好使的时候可以用cnpm
+
+- 2.上述操作不能解决问题时，采用第二步
+
+```js
+toHtmlCanvasShareFn() {
+	// 修改前代码
+	html2canvas(this.$refs.htmlCanvas, {
+		backgroundColor: null
+	}).then((canvas) => {
+		let dataURL = canvas.toDataURL("image/png");
+		this.shareImgUrl = dataURL;
+		console.log(this.dataURL)
+	});
+
+	// 修改后代码 主要将 html2canvas 修改为 (window.html2canvas || html2canvas)
+	(window.html2canvas || html2canvas)(this.$refs.htmlCanvas, {
+		backgroundColor: null
+	}).then((canvas) => {
+		let dataURL = canvas.toDataURL("image/png");
+		this.shareImgUrl = dataURL;
+		console.log(this.dataURL)
+	});
+}
+```
+
+- 3.前两步都不好使的时候，尝试第三步
+
+1.我做功能的时候，前两步都没有解决我的问题。<br>
+于是我尝试这样首先移除【npm uninstall html2canvas】这个包<br>
+2.把第二步中的兼容代码也加上<br>
+3.在公共static文件中单独下载 html2canvas@1.0.0-rc.4这个版本<br>
+4.记住要把在文件中用的 import html2canvas from 'html2canvas'; 这句删掉<br>
+5.提测，顺利解决

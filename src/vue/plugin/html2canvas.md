@@ -122,4 +122,7 @@ toHtmlCanvasShareFn() {
 2.把第二步中的兼容代码也加上<br>
 3.在公共static文件中单独下载 html2canvas@1.0.0-rc.4这个版本<br>
 4.记住要把在文件中用的 import html2canvas from 'html2canvas'; 这句删掉<br>
-5.提测，顺利解决
+5.在index.html中引用rc.4这个版本的js
+6.提测 解决问题
+
+- [html2canvas@1.0.0-rc.4 下载地址](https://github.com/niklasvh/html2canvas/releases/tag/v1.0.0-rc.4)

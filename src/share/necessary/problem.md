@@ -127,3 +127,35 @@ npm ERR!     /Users/xudier/.npm/_logs/2020-07-03T06_16_23_041Z-debug.log
 
 - 找到后通过命令下载，我一般会用cnpm，npm经常会报错。
 - 再重新执行那个会报错的命令，可以看看问题有没有解决
+
+## 5.vue在生产环境清除console.log
+
+在cli还是2.xx 版本的时候，我们可以这样
+- 1.npm/cnpm 下载
+```js
+ cnpm uglifyjs-webpack-plugin --save-dev
+```
+
+- 2.在build/webpack.prod.conf.js文件下,在webpackConfig中plugins数组中进行配置
+
+```js
+plugins: [
+  new UglifyJsPlugin({
+    uglifyOptions: {
+      compress: {
+        warnings: false,
+        drop_console: true,
+        pure_funcs: ['console.log']
+      },
+      mangle: {
+        safari10: true
+      }
+    },
+    sourceMap: config.build.productionSourceMap,
+    parallel: true
+  }),
+]
+```
+
+如果cli是3.xx几版本的，可以尝试这个
++ [原文地址](https://blog.csdn.net/benben513624/article/details/86661235?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.compare&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.compare)

@@ -159,3 +159,19 @@ plugins: [
 
 如果cli是3.xx几版本的，可以尝试这个
 + [原文地址](https://blog.csdn.net/benben513624/article/details/86661235?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.compare&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.compare)
+
+## 6.系统可能不会保存你所做的修改 onbeforeunload
+
+```js
+// 监听页面关闭
+window.addEventListener('beforeunload', (e) => {
+    let changeSymbol = false
+    if(changeSymbol) {
+      return (e.returnValue = '有信息未保存，确认离开？！'); 
+    }
+    // return null; // 不会弹框
+    // return true // 会弹框
+})
+```
+
+像上述情况，只要将changeSymbol改为true，那么return的内容必为true，也就会弹框。

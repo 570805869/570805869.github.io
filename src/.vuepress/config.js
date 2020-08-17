@@ -14,6 +14,7 @@ module.exports = {
     authorAvatar: '/img/me.jpeg',
     startYear: '2018',
     noFoundPageByTencent: false,
+    color: '#42b983', // 登录页动画球的颜色
     logo: '/img/me.jpeg',
     sidebarDepth: 3,
     navBar: true,
@@ -30,7 +31,7 @@ module.exports = {
           { text: '文档集合', link: '/share/link/doc'},
           { text: '插件使用', link: '/share/plugins/pluginIndex'},
           { text: 'element-ui', link: '/share/element-ui/index'},
-          // { text: '桌面应用', link: '/share/desktop/desktop-index'},
+          { text: '常备', link: '/share/interview/interview'},
         ]
       },
       {
@@ -57,6 +58,8 @@ module.exports = {
       '/share/mobile/': genSidebarConfig('移动端学习', ['wechat', 'mobile-1', 'mobile-2', 'mobile-bug']),
       '/share/en/': genSidebarConfig('英文学习', ['webpack', 'npm', 'skulpt', 'ecma', 'scratch', 'ecma-translate']),
       '/share/desktop/': genSidebarConfig('桌面应用', ['contrast']),
+      // '/share/interview/': genSidebarConfig('常备', ['css', 'js', 'vue']),
+      '/share/interview/': genSidebarConfig('常备', ['css', 'js', 'vue']),
       '/skulpt/': genSidebarConfig('skulpt', ['links', '1']),
       '/scratch/': genSidebarConfig('深入scratch', ['links', '1', 'sb3']),
       '/share/code/': genSidebarConfig('必备代码片段', ['js', 'style']),

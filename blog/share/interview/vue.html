@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuex中state的理解 | 可爱的许荻荻</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    <link rel="icon" href="xd.ico">
+    <meta name="description" content="学习吗？一起呗～">
+    <meta name="theme-color" content="#3eaf7c">
+    <link rel="preload" href="/blog/assets/css/0.styles.971f2828.css" as="style"><link rel="preload" href="/blog/assets/js/app.51ed6378.js" as="script"><link rel="preload" href="/blog/assets/js/3.1ca2b6cb.js" as="script"><link rel="preload" href="/blog/assets/js/1.5166e0d5.js" as="script"><link rel="preload" href="/blog/assets/js/37.f975804e.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.a6b10962.js"><link rel="prefetch" href="/blog/assets/js/11.32a1767f.js"><link rel="prefetch" href="/blog/assets/js/12.d64460fc.js"><link rel="prefetch" href="/blog/assets/js/13.9791e9b2.js"><link rel="prefetch" href="/blog/assets/js/14.62c3068a.js"><link rel="prefetch" href="/blog/assets/js/15.142df326.js"><link rel="prefetch" href="/blog/assets/js/16.b83dd445.js"><link rel="prefetch" href="/blog/assets/js/17.51244085.js"><link rel="prefetch" href="/blog/assets/js/18.250a1047.js"><link rel="prefetch" href="/blog/assets/js/19.068e5abf.js"><link rel="prefetch" href="/blog/assets/js/20.6043a542.js"><link rel="prefetch" href="/blog/assets/js/21.6fcd7f75.js"><link rel="prefetch" href="/blog/assets/js/22.c50ff508.js"><link rel="prefetch" href="/blog/assets/js/23.050af201.js"><link rel="prefetch" href="/blog/assets/js/24.9112ef90.js"><link rel="prefetch" href="/blog/assets/js/25.3feda9f0.js"><link rel="prefetch" href="/blog/assets/js/26.8e24c2ac.js"><link rel="prefetch" href="/blog/assets/js/27.7e3ff3a5.js"><link rel="prefetch" href="/blog/assets/js/28.811d4e19.js"><link rel="prefetch" href="/blog/assets/js/29.9ac6ce01.js"><link rel="prefetch" href="/blog/assets/js/30.b9fec09b.js"><link rel="prefetch" href="/blog/assets/js/31.f18bd967.js"><link rel="prefetch" href="/blog/assets/js/32.6291a949.js"><link rel="prefetch" href="/blog/assets/js/33.b1bc6aaa.js"><link rel="prefetch" href="/blog/assets/js/34.e440130b.js"><link rel="prefetch" href="/blog/assets/js/35.d40dfee6.js"><link rel="prefetch" href="/blog/assets/js/36.18ac6199.js"><link rel="prefetch" href="/blog/assets/js/38.f9abfcbd.js"><link rel="prefetch" href="/blog/assets/js/39.936d7b30.js"><link rel="prefetch" href="/blog/assets/js/4.8bf07c4c.js"><link rel="prefetch" href="/blog/assets/js/40.31715c87.js"><link rel="prefetch" href="/blog/assets/js/41.f5de0bd6.js"><link rel="prefetch" href="/blog/assets/js/42.b4e0792c.js"><link rel="prefetch" href="/blog/assets/js/43.6cc1a1c4.js"><link rel="prefetch" href="/blog/assets/js/44.507a1684.js"><link rel="prefetch" href="/blog/assets/js/45.177d0f84.js"><link rel="prefetch" href="/blog/assets/js/46.ff6628b9.js"><link rel="prefetch" href="/blog/assets/js/47.3d507a00.js"><link rel="prefetch" href="/blog/assets/js/48.8e7c4f4f.js"><link rel="prefetch" href="/blog/assets/js/49.44700a13.js"><link rel="prefetch" href="/blog/assets/js/5.829a053e.js"><link rel="prefetch" href="/blog/assets/js/50.c1f68ac5.js"><link rel="prefetch" href="/blog/assets/js/51.c07a1a47.js"><link rel="prefetch" href="/blog/assets/js/52.6166ffd7.js"><link rel="prefetch" href="/blog/assets/js/53.a2c9c1da.js"><link rel="prefetch" href="/blog/assets/js/54.bed63250.js"><link rel="prefetch" href="/blog/assets/js/55.03eaf7ce.js"><link rel="prefetch" href="/blog/assets/js/56.d54a0f73.js"><link rel="prefetch" href="/blog/assets/js/57.d728d664.js"><link rel="prefetch" href="/blog/assets/js/58.a4890701.js"><link rel="prefetch" href="/blog/assets/js/59.8e49e53c.js"><link rel="prefetch" href="/blog/assets/js/6.26f54560.js"><link rel="prefetch" href="/blog/assets/js/60.1585fdf7.js"><link rel="prefetch" href="/blog/assets/js/61.49f7066d.js"><link rel="prefetch" href="/blog/assets/js/62.a5731885.js"><link rel="prefetch" href="/blog/assets/js/7.da2bd79f.js"><link rel="prefetch" href="/blog/assets/js/8.268b4aba.js"><link rel="prefetch" href="/blog/assets/js/9.e3e8ebe9.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.971f2828.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1c920fb4><div data-v-1c920fb4><div id="loader-wrapper" class="loading-wrapper" data-v-71fac282 data-v-1c920fb4 data-v-1c920fb4><div class="loader-main" data-v-71fac282><div data-v-71fac282></div><div data-v-71fac282></div><div data-v-71fac282></div><div data-v-71fac282></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-6ef27168 data-v-1c920fb4 data-v-1c920fb4><h3 class="title" style="display:none;" data-v-6ef27168 data-v-6ef27168>可爱的许荻荻</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6ef27168 data-v-6ef27168><input type="password" value="" data-v-6ef27168> <span data-v-6ef27168>Konck! Knock!</span> <button data-v-6ef27168>OK</button></label> <div class="footer" style="display:none;" data-v-6ef27168 data-v-6ef27168><span data-v-6ef27168><i class="iconfont reco-theme" data-v-6ef27168></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6ef27168>vuePress-theme-reco</a></span> <span data-v-6ef27168><i class="iconfont reco-copyright" data-v-6ef27168></i> <a data-v-6ef27168><span data-v-6ef27168>许荻荻的博客</span>
+            
+          <span data-v-6ef27168>2018 - </span>
+          2020
+        </a></span></div></div> <div class="hide" data-v-1c920fb4><header class="navbar" data-v-1c920fb4><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/me.jpeg" alt="可爱的许荻荻" class="logo"> <span class="site-name">可爱的许荻荻</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      常规操作
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/share/necessary/necessary-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  必备技能
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/wepack-pro/webpack-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/mobile/mobile-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  移动端学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/en/en-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  英文学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/code/code-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  必备代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/link/doc.html" class="nav-link"><i class="iconfont undefined"></i>
+  文档集合
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/plugins/pluginIndex.html" class="nav-link"><i class="iconfont undefined"></i>
+  插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/element-ui/index.html" class="nav-link"><i class="iconfont undefined"></i>
+  element-ui
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/interview/interview.html" class="nav-link"><i class="iconfont undefined"></i>
+  常备
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      Vue
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/vue/base/text.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue-基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/plugin/plugins.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue-插件
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/pro/problem.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue-问题
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/style/text.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue-风格
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/url/fe.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用网址
+</a></div><div class="nav-item"><a href="https://github.com/570805869" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1c920fb4></div> <aside class="sidebar" data-v-1c920fb4><div class="personal-info-wrapper" data-v-44c89ab2 data-v-1c920fb4><img src="/blog/img/me.jpeg" alt="author-avatar" class="personal-img" data-v-44c89ab2> <h3 class="name" data-v-44c89ab2>
+    许荻荻的博客
+  </h3> <div class="num" data-v-44c89ab2><div data-v-44c89ab2><h3 data-v-44c89ab2>12</h3> <h6 data-v-44c89ab2>文章</h6></div> <div data-v-44c89ab2><h3 data-v-44c89ab2>5</h3> <h6 data-v-44c89ab2>标签</h6></div></div> <hr data-v-44c89ab2></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      常规操作
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/share/necessary/necessary-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  必备技能
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/wepack-pro/webpack-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  webpack学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/mobile/mobile-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  移动端学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/en/en-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  英文学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/code/code-index.html" class="nav-link"><i class="iconfont undefined"></i>
+  必备代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/link/doc.html" class="nav-link"><i class="iconfont undefined"></i>
+  文档集合
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/plugins/pluginIndex.html" class="nav-link"><i class="iconfont undefined"></i>
+  插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/element-ui/index.html" class="nav-link"><i class="iconfont undefined"></i>
+  element-ui
+</a></li><li class="dropdown-item"><!----> <a href="/blog/share/interview/interview.html" class="nav-link"><i class="iconfont undefined"></i>
+  常备
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      Vue
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/vue/base/text.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue-基础
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/plugin/plugins.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue-插件
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/pro/problem.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue-问题
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/style/text.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue-风格
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/url/fe.html" class="nav-link"><i class="iconfont undefined"></i>
+  常用网址
+</a></div><div class="nav-item"><a href="https://github.com/570805869" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont undefined"></i>
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>常备</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/share/interview/css.html" class="sidebar-link">css部分</a></li><li><a href="/blog/share/interview/js.html" class="sidebar-link">js部分</a></li><li><a href="/blog/share/interview/vue.html" aria-current="page" class="active sidebar-link">vuex中state的理解</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-6ef27168 data-v-1c920fb4><h3 class="title" style="display:none;" data-v-6ef27168 data-v-6ef27168></h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-6ef27168 data-v-6ef27168><input type="password" value="" data-v-6ef27168> <span data-v-6ef27168>Konck! Knock!</span> <button data-v-6ef27168>OK</button></label> <div class="footer" style="display:none;" data-v-6ef27168 data-v-6ef27168><span data-v-6ef27168><i class="iconfont reco-theme" data-v-6ef27168></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-6ef27168>vuePress-theme-reco</a></span> <span data-v-6ef27168><i class="iconfont reco-copyright" data-v-6ef27168></i> <a data-v-6ef27168><span data-v-6ef27168>许荻荻的博客</span>
+            
+          <span data-v-6ef27168>2018 - </span>
+          2020
+        </a></span></div></div> <div data-v-1c920fb4><main class="page"><div class="page-title" style="display:none;"><h1>vuex中state的理解</h1> <div data-v-d5d1b660><i class="iconfont reco-account" data-v-d5d1b660><span data-v-d5d1b660>许荻荻的博客</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="vuex中state的理解"><a href="#vuex中state的理解" class="header-anchor">#</a> vuex中state的理解</h2> <ul><li>vuex是专门为vue.js存在的一个状态管理模式。采用集中式存储管理应用的所有组件的状态，并咦相应的规则保证状态以一种可预测的方式发生变化。<br></li> <li>state：全局响应式的数据，注册store后，vue组件会从store中读取数据，理解为一种全局变量（全局代表整个项目）。<br>
+避免了不用再去使用父子组件传参，或者接口请求的方式去拿全局变量。而是通过监听的形式，随时观察数据的更改。<br></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 在js中：this.$store.state.属性名来获取</span>
+<span class="token comment">// 在元素标签中使用{{$store.state.属性名}}来获取</span>
+</code></pre></div><h2 id="vue-router-跳转方式"><a href="#vue-router-跳转方式" class="header-anchor">#</a> vue-router 跳转方式</h2> <div class="language-js extra-class"><pre class="language-js"><code>跳转路由的几种方式：
+ 
+  <span class="token number">1</span>、声明式： <span class="token number">1</span><span class="token punctuation">)</span> 根据路由路径（<span class="token operator">/</span>home<span class="token operator">/</span>sort<span class="token operator">/</span>detail）跳转 <span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token operator">:</span>to<span class="token operator">=</span><span class="token string">&quot;{path: '/home/sort/detail', query:{id: 'abc'}}&quot;</span><span class="token operator">&gt;</span>点击查看子页面<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">&gt;</span>
+             <span class="token number">2</span><span class="token punctuation">)</span> 根据路由名称（detail）跳转 <span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token operator">:</span>to<span class="token operator">=</span><span class="token string">&quot;{name: 'detail', params:{id: 'abc'}}&quot;</span><span class="token operator">&gt;</span>点击查看子页面<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">&gt;</span>
+                <span class="token operator">:</span>to<span class="token operator">=</span><span class="token string">&quot;&quot;</span>  可以实现绑定动态的 路由 和 参数
+ 
+  <span class="token number">2</span>、编程式： <span class="token number">1</span>） <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>path<span class="token operator">:</span> <span class="token string">'/home/sort/detail'</span><span class="token punctuation">,</span>query<span class="token operator">:</span><span class="token punctuation">{</span>id<span class="token operator">:</span> <span class="token string">'abc'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+             <span class="token number">2</span>） <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>name<span class="token operator">:</span> <span class="token string">'detail'</span><span class="token punctuation">,</span>params<span class="token operator">:</span><span class="token punctuation">{</span>id<span class="token operator">:</span> <span class="token string">'abc'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+ 
+    备注： params 和 query 传参的区别：
+            <span class="token number">1</span>、params传参时  参数不会出现在url的路径上面， 但是刷新页面时param里面的数据会消失
+            <span class="token number">2</span>、query传参时   参数出现在url的路径上面， 刷新页面时query里面的数据不变
+</code></pre></div><h2 id="vue的自定义指令"><a href="#vue的自定义指令" class="header-anchor">#</a> vue的自定义指令</h2> <h2 id="vue与react的区别"><a href="#vue与react的区别" class="header-anchor">#</a> vue与react的区别</h2> <ul><li>1.Vue和React设计理念上有区别：<br>
+Vue使用的是可变数据，而React更强调数据的不可变<br></li> <li>2.监听数据变化的实现原理不同：<br>
+Vue通过 getter/setter以及一些函数的劫持，能精确知道数据变化。<br>
+React默认是通过比较引用的方式（diff）进行的（如果不优化可能导致大量不必要的VDOM的重新渲染）<br></li> <li>3.数据流的不同<br>
+vue 2.x版本父向子组件传递，单向数据主流。组件与dom通过v-model实现双向绑定。<br>
+React一直不支持双向绑定，提倡的是单向数据流，称之为onChange/setState()模式<br></li> <li>4.组件通信的区别<br>
+vue中：<br>
+a.父组件通过props向子组件传递数据或者回调，虽然可以传递回调，但是我们一般只传数据<br>
+b.子组件通过事件向父组件发送消息<br>
+c.provide/inject来实现父组件向子组件注入数据，可以跨越多个层级<br>
+react中：<br>
+a.父组件通过props可以向子组件传递数据或者回调<br>
+b.context 进行跨层级的通信<br></li></ul> <p>Vue中子组件向父组件传递消息有两种方式：事件和回调函数，但Vue更倾向于使用事件。<br>
+在React中我们都是使用回调函数的，这可能是他们二者最大的区别。<br></p> <ul><li>5.模版渲染方式不同<br>
+vue在和组件js代码分离的单独的模板中，通过指令实现。（v-if）<br>
+react通过js实现模版中常见于法（插值，条件，循环）<br>
+（react中render函数支持闭包特性，import的组件在render中可直接调用；vue里模版中使用的数据都必须挂在this上进行一次中转，需要在components下再次声明）<br></li> <li>6.渲染过程不同<br>
+vue计算虚拟dom差异（渲染过程中，跟踪每一个组件依赖关系）<br>
+react应用的状态改变时，全部子组件重新渲染<br></li> <li>7.框架本质<br>
+vue是mvvm框架，mvc发展而来<br>
+react前端组件化框架，后端组件化发展而来<br></li></ul> <h2 id="vuex和redux区别"><a href="#vuex和redux区别" class="header-anchor">#</a> vuex和redux区别</h2> <ul><li>vuex中：$store被直接注入到组件实例中，可以灵活使用：dispatch和commit提交更新，通过mapState或者this.$store来读取数据。组件中既可以dispatch action，也可以commit updates。<br></li> <li>redux中：每一个组件都需要显示的用connect把需要的props和dispatch连接起来。只能进行dispatch，不能直接调用reducer进行修改。<br></li></ul> <p>最大区别：Redux使用的是不可变数据，而Vuex的数据是可变的，因此，Redux每次都是用新state替换旧state，而Vuex是直接修改。Redux在检测数据变化的时候，是通过diff的方式比较差异的，而Vuex其实和Vue的原理一样，是通过getter/setter来比较的，这两点的区别，也是因为React和Vue的设计理念不同。React更偏向于构建稳定大型的应用，非常的科班化。相比之下，Vue更偏向于简单迅速的解决问题，更灵活，不那么严格遵循条条框框。因此也会给人一种大型项目用React，小型项目用Vue的感觉。</p> <h2 id="vue组件中-create和mount区别"><a href="#vue组件中-create和mount区别" class="header-anchor">#</a> vue组件中 create和mount区别</h2> <ul><li>created ：是在页面渲染之前发生的 ，如果想要获取数据渲染到html之后元素的宽高 这些事拿不到的。<br></li> <li>mounted：是在渲染data里面的数据到页面上之后 发生的 所以这时候去元素的具体信息是可以拿到的。<br></li></ul> <table><thead><tr><th>生命周期</th> <th style="text-align:center;">是否获取DOM节点</th> <th style="text-align:center;">是否可以获取data</th> <th style="text-align:right;">是否获取methods</th></tr></thead> <tbody><tr><td>beforeCreate</td> <td style="text-align:center;">0</td> <td style="text-align:center;">0</td> <td style="text-align:right;">0</td></tr> <tr><td>create</td> <td style="text-align:center;">0</td> <td style="text-align:center;">1</td> <td style="text-align:right;">1</td></tr> <tr><td>beforeMount</td> <td style="text-align:center;">0</td> <td style="text-align:center;">1</td> <td style="text-align:right;">1</td></tr> <tr><td>mounted</td> <td style="text-align:center;">1</td> <td style="text-align:center;">1</td> <td style="text-align:right;">1</td></tr></tbody></table> <h2 id="如何获取dom"><a href="#如何获取dom" class="header-anchor">#</a> 如何获取dom</h2> <ul><li>1.vue1.*版本中<br>
+在标签中加上el='dom'，然后在代码中this.$els.dom这样就拿到了页面元素<br>
+&lt; div class='box'  v-el: myBox&gt;你好&lt;/ div &gt;<br>
+让你好的颜色显示为红色：this.$els.my-box.style.color = 'red'<br></li> <li>2.vue2.*版本中<br>
+在标签中加上ref='dom'，然后在代码中this.$refs.dom这样就拿到了页面元素<br>
+例如：&lt; div class='box' ref='myBox'&gt;你好&lt; /div&gt;<br>
+让你好的颜色显示为红色：this.$refs.myBox.style.color = 'red<br></li></ul> <h2 id="updated更新理解"><a href="#updated更新理解" class="header-anchor">#</a> updated更新理解</h2> <p>在页面上 改变元数据data中数据,并且导致页面重新渲染时,才会进入update周期<br></p> <h2 id="vue-router两种模式-hash-和-history"><a href="#vue-router两种模式-hash-和-history" class="header-anchor">#</a> vue-router两种模式 hash 和 history</h2> <ul><li>1：(hash) - 即地址栏URL中的 # 符号（此hash不是密码学里的散列运算）<br>
+比如这个URL：http：//www.abc.com/#/hello,hash的值为#/hello.它的特点在于：hash虽然出现在URL中，但不会被包括在HTTP请求中，对后端完全没有影响，因此改变hash不会重新加载页面。<br></li> <li>2：history - 利用了HTML5 History Interface中新增的pushState()和replaceState（）方法。<br></li></ul> <h2 id="v-if和v-show区别"><a href="#v-if和v-show区别" class="header-anchor">#</a> v-if和v-show区别</h2> <ul><li>v-if的原理是根据判断条件来动态的进行增删DOM元素<br></li> <li>v-show是根据判断条件来动态的进行显示和隐藏元素。<br>
+频繁的进行增删DOM操作会影响页面加载速度和性能<br></li></ul> <h2 id="vue组件局部刷新"><a href="#vue组件局部刷新" class="header-anchor">#</a> vue组件局部刷新</h2> <p>通过（provide/inject）实现 <br></p> <ul><li>第一步 : 在 app.vue 中定义全局方法:如下<br></li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;router-view v-if=&quot;isRouterAlive&quot;/&gt;    //通过v-if来控制容器的出现与消失
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: 'App',
+  provide(){
+    return {
+      reload:this.reload
+    }
+  },
+  data(){
+    return{
+      isRouterAlive: true
+    }
+  },
+  methods: {
+   reload () {
+     this.isRouterAlive = false
+     this.$nextTick(() =&gt; (this.isRouterAlive = true))
+   }   
+ }
+}
+&lt;/script&gt;
+</code></pre></div><ul><li>第二步:在全局中定义了刷新的方法, 接下来就是要引入到需要刷新的组件中:<br></li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;script&gt;
+import axios from &quot;axios&quot;;
+export default {
+  inject:[&quot;reload&quot;],
+  name: &quot;StoreServiceProjectManagement&quot;,
+  mounted() {
+    this.reload();
+  }
+};
+&lt;/script&gt;
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-2a0afe42 data-v-2a0afe42><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-2a0afe42><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-2a0afe42></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-2a0afe42></path></svg></div><canvas id="vuepress-canvas-ribbon"></canvas><div class="reco-bgm-panel" data-v-0a2aff30><audio id="bgm" src="https://assets.smallsunnyfox.com/music/3.mp3" data-v-0a2aff30></audio> <div class="reco-float-box" style="bottom:200px;z-index:999999;display:none;" data-v-0a2aff30 data-v-0d264cb4 data-v-0a2aff30><img src="https://assets.smallsunnyfox.com/music/3.jpg" data-v-0a2aff30></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-0a2aff30 data-v-0d264cb4 data-v-0a2aff30><div class="reco-bgm-cover" style="background-image:url(https://assets.smallsunnyfox.com/music/3.jpg);" data-v-0a2aff30><div class="mini-operation" style="display:none;" data-v-0a2aff30><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-0a2aff30></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-0a2aff30></i></div> <div class="falut-message" style="display:none;" data-v-0a2aff30>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-0a2aff30 data-v-0d264cb4 data-v-0a2aff30><div class="info-box" data-v-0a2aff30><i class="reco-bgm reco-bgm-music music" data-v-0a2aff30></i>用胳膊当枕头</div> <div class="info-box" data-v-0a2aff30><i class="reco-bgm reco-bgm-artist" data-v-0a2aff30></i>최낙타</div> <div class="reco-bgm-progress" data-v-0a2aff30><div class="progress-bar" data-v-0a2aff30><div class="bar" data-v-0a2aff30></div></div></div> <div class="reco-bgm-operation" data-v-0a2aff30><i class="reco-bgm reco-bgm-last last" data-v-0a2aff30></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-0a2aff30></i> <i class="reco-bgm reco-bgm-play play" data-v-0a2aff30></i> <i class="reco-bgm reco-bgm-next next" data-v-0a2aff30></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-0a2aff30></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-0a2aff30></i> <div class="volume-bar" data-v-0a2aff30><div class="bar" data-v-0a2aff30></div></div></div></div> <div class="reco-bgm-left-box" data-v-0a2aff30 data-v-0d264cb4 data-v-0a2aff30><i class="reco-bgm reco-bgm-left" data-v-0a2aff30></i></div></div></div><canvas id="vuepress-canvas-cursor"></canvas></div></div>
+    <script src="/blog/assets/js/app.51ed6378.js" defer></script><script src="/blog/assets/js/3.1ca2b6cb.js" defer></script><script src="/blog/assets/js/1.5166e0d5.js" defer></script><script src="/blog/assets/js/37.f975804e.js" defer></script>
+  </body>
+</html>

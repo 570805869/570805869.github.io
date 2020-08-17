@@ -16,4 +16,4 @@ npm start
 npm run pd
 ```
 访问地址：
-[https://570805869.github.io/blog/](https://570805869.github.io/blog/)
+[http://www.xudidi.vip/blog/](http://www.xudidi.vip/blog/)

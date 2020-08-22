@@ -1,3 +1,4 @@
+# vue部分
 
 ## vuex中state的理解
 - vuex是专门为vue.js存在的一个状态管理模式。采用集中式存储管理应用的所有组件的状态，并咦相应的规则保证状态以一种可预测的方式发生变化。<br>
@@ -90,10 +91,14 @@ mounted|1|1|1
 ## updated更新理解
 在页面上 改变元数据data中数据,并且导致页面重新渲染时,才会进入update周期<br>
 
-## vue-router两种模式 hash 和 history
+## vue-router两种模式 hash 和 history 和 abstract
 - 1：(hash) - 即地址栏URL中的 # 符号（此hash不是密码学里的散列运算）<br>
 比如这个URL：http：//www.abc.com/#/hello,hash的值为#/hello.它的特点在于：hash虽然出现在URL中，但不会被包括在HTTP请求中，对后端完全没有影响，因此改变hash不会重新加载页面。<br>
 - 2：history - 利用了HTML5 History Interface中新增的pushState()和replaceState（）方法。<br>
+- 3: abstract: 支持所有 JavaScript 运行环境，如 Node.js 服务器端。如果发现没有浏览器的 API，路由会自动强制进入这个模式。
+
+## vue-router的 base
+应用的基路径。例如，如果整个单页应用服务在 /app/ 下，然后 base 就应该设为 "/app/"（所有的路由path前面url会添加一个基路径）
 
 ## v-if和v-show区别
 - v-if的原理是根据判断条件来动态的进行增删DOM元素<br>

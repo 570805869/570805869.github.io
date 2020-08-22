@@ -279,6 +279,42 @@ cp -r test test1	  复制一个文件夹(包含文件夹下的文件)
 
 ## api形式（restful）
 
+## 请使用JavaScript实现对字符串 s ，查找出出现次数最多的字符，并统计次数。如：let s = "ABCDAAAA"; 打印出“A 5”
+
+```js
+function setNumber(str) {
+    let targetObj = {};
+    for (let i=0; i < str.length; i++) {
+        let chars = str.charAt(i);
+        if (targetObj[chars]) {
+            targetObj[chars] ++;
+        } else {
+            targetObj[chars] = 1
+        }
+    }
+    let maxNumber = 0;
+    let maxChar = '';
+    for (let value in targetObj) {
+        if (targetObj[value] > maxNumber) {
+            maxNumber = targetObj[value];
+            maxChar = value
+        }
+    }
+    console.log(`${maxChar}   ${maxNumber}`)
+}
+```
+
+## 原生js优点和缺点
+优点：<br>
+- 性能：由于JavaScript运行在客户端，节省了web服务器的请求时间和带宽
+- 轻量级的脚本语言，比较容易学习
+- 运行在用户机器上，运行结果和处理相对比较快。
+- 可以使用第三方附加组件来检查代码片段。
+
+缺点：<br>
+- 安全问题：由于JavaScript在客户端运行，可能被用于黑客目的。
+- 渲染问题：在不同浏览器中的处理结果可能不同。
+
 # ES6
 
 ## es6中 let 和 const的区别

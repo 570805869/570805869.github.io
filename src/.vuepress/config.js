@@ -31,6 +31,7 @@ module.exports = {
           { text: '文档集合', link: '/share/link/doc'},
           { text: '插件使用', link: '/share/plugins/pluginIndex'},
           { text: 'element-ui', link: '/share/element-ui/index'},
+          { text: 'iview', link: '/share/iview/index'},
           { text: '常备', link: '/share/interview/interview'},
         ]
       },
@@ -65,6 +66,7 @@ module.exports = {
       '/share/code/': genSidebarConfig('必备代码片段', ['js', 'style']),
       '/share/plugins/': genSidebarConfig('插件使用', ['pdfjs']),
       '/share/element-ui/': genSidebarConfig('常用组件', ['use']),
+      '/share/iview/': genSidebarConfig('常用组件', ['use']),
 
       // vue相关
       '/vue/base/': genSidebarConfig('vue基础概念', ['file']),

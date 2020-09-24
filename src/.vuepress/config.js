@@ -33,6 +33,8 @@ module.exports = {
           { text: 'element-ui', link: '/share/element-ui/index'},
           { text: 'iview', link: '/share/iview/index'},
           { text: '常备', link: '/share/interview/interview'},
+          { text: 'coding部署', link: '/share/necessary/coding'},
+
         ]
       },
       {
@@ -55,7 +57,7 @@ module.exports = {
     ],
     sidebar: {
       '/share/wepack-pro/': genSidebarConfig('webpack学习', ['webpack-note', 'webpack-deep', 'webpack-pro']),
-      '/share/necessary/': genSidebarConfig('必备技能', ['env', 'eslint', 'javascript-basic', 'md', 'opt', 'problem']),
+      '/share/necessary/': genSidebarConfig('必备技能', ['env', 'eslint', 'javascript-basic', 'md', 'opt', 'problem', 'coding']),
       '/share/mobile/': genSidebarConfig('移动端学习', ['wechat', 'mobile-1', 'mobile-2', 'mobile-bug']),
       '/share/en/': genSidebarConfig('英文学习', ['webpack', 'npm', 'skulpt', 'ecma', 'scratch', 'ecma-translate']),
       '/share/desktop/': genSidebarConfig('桌面应用', ['contrast']),

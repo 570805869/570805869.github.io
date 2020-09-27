@@ -68,7 +68,7 @@ module.exports = {
       '/share/code/': genSidebarConfig('必备代码片段', ['js', 'style']),
       '/share/plugins/': genSidebarConfig('插件使用', ['pdfjs']),
       '/share/element-ui/': genSidebarConfig('常用组件', ['use']),
-      '/share/iview/': genSidebarConfig('常用组件', ['use']),
+      '/share/iview/': genSidebarConfig('常用组件', ['use', 'apiLoading']),
 
       // vue相关
       '/vue/base/': genSidebarConfig('vue基础概念', ['file']),

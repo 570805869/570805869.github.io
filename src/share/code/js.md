@@ -361,3 +361,51 @@ function validSpeVal(val) {
   .replace(/'/g, "&apos;").replace(/ /g, "&nbsp;");
 }
 ```
+
+## 下载文件（任何类型-将文件下载至本地）
+
+```js
+/**
+ * @param url  ：文件链接
+ * @param fileName  ：文件名;
+ * @param type  ：文件类型;
+ */
+function fileLinkToStreamDownload(url, fileName, type) {
+  let xhr = new XMLHttpRequest();
+  xhr.open('get', url, true);
+  xhr.setRequestHeader('Content-Type', `application/${type}`);
+  xhr.responseType = "blob";
+  xhr.onload = function () {
+      if (this.status == 200) {
+          var blob = this.response;
+          downloadExportFile(blob, fileName, type)
+      }
+  }
+  xhr.send();
+}
+
+function downloadExportFile(blob, tagFileName, fileType) {
+  let downloadElement = document.createElement('a');
+  let href = blob;
+  if (typeof blob == 'string') {
+      downloadElement.target = '_blank';
+  } else {
+      href = window.URL.createObjectURL(blob);
+  }
+  downloadElement.href = href;
+  downloadElement.download = tagFileName +  '.' + fileType;
+  document.body.appendChild(downloadElement);
+  downloadElement.click();
+  document.body.removeChild(downloadElement);
+  if (typeof blob != 'string') {
+      window.URL.revokeObjectURL(href);
+  }
+}
+```
+
+使用方法：
+
+```js
+fileLinkToStreamDownload(fileUrl, fileName, fileType) // 传入相应的数据即可
+```
+

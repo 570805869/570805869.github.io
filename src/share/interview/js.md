@@ -318,3 +318,19 @@ function setNumber(str) {
 # ES6
 
 ## es6中 let 和 const的区别
+
+- 不存在变量提升
+- 暂时性死区，先声明在使用
+```js
+var tmp = 123;
+ 
+if (true) {
+  tmp = 'abc'; // ReferenceError
+  let tmp;
+}
+```
+上面代码中，存在全局变量tmp，但是块级作用域内let又声明了一个局部变量tmp，导致后者绑定这个块级作用域，所以在let声明变量前，对tmp赋值报错，先声明再使用。<br >
+- 不允许重复声明
+- 块级作用域
+
+

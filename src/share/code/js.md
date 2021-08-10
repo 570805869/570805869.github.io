@@ -5,6 +5,8 @@ categories:
  - 基础
 tags:
  - 基础
+keys:
+ - 'c33367701511b4f6020ec61ded352059'
 ---
 
 ## 深拷贝
@@ -409,3 +411,59 @@ function downloadExportFile(blob, tagFileName, fileType) {
 fileLinkToStreamDownload(fileUrl, fileName, fileType) // 传入相应的数据即可
 ```
 
+## 防抖
+
+效果意义：如果短时间内大量触发同一事件，只会执行一次函数。<br/>
+实现：借助闭包，实现关键在于setTimeout的使用，需要一个变量保存计时。<br/>
+应用：页面resize事件，常见于需要做页面适配的时候<br/>
+
+```js
+function debounce(fn,delay){
+    let timer = null //借助闭包
+    return function() {
+        if(timer){
+            clearTimeout(timer) 
+        }
+        timer = setTimeout(fn,delay) // 简化写法
+    }
+}
+// 然后是旧代码
+function showTop  () {
+    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+　　console.log('滚动条位置：' + scrollTop);
+}
+window.onscroll = debounce(showTop,1000) // 为了方便观察效果我们取个大点的间断值，实际使用根据需要来配置
+```
+
+## 节流
+
+效果意义：如果短时间内大量触发同一事件，那么在函数执行一次之后，该函数在指定的时间期限内不再工作，直至过了这段时间才重新生效。<br/>
+应用：搜索框input事件（就当做用户输入完成，然后开始搜索），按钮重复点击<br/>
+
+```js
+function throttle(fn,delay){
+    let valid = true
+    return function() {
+       if(!valid){
+           return false //休息时间 暂不接客
+       }
+        valid = false // 工作时间，执行函数并且在间隔期内把状态位设为无效
+        setTimeout(() => {
+            fn()
+            valid = true;
+        }, delay)
+    }
+}
+/* 
+  请注意，节流函数并不止上面这种实现方案,
+  例如可以完全不借助setTimeout，可以把状态位换成时间戳，然后利用时间戳差值是否大于指定间隔时间来做判定。
+  也可以直接将setTimeout的返回的标记当做判断条件-判断当前定时器是否存在，如果存在表示还在冷却，并且在执行fn之后消除定时器表示激活，原理都一样
+*/
+
+// 以下照旧
+function showTop  () {
+    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+　　console.log('滚动条位置：' + scrollTop);
+}
+window.onscroll = throttle(showTop,1000) 
+```

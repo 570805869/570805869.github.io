@@ -74,7 +74,13 @@ module.exports = {
       '/vue/base/': genSidebarConfig('vue基础概念', ['file']),
       '/vue/pro/': genSidebarConfig('vue', ['vue', 'tes']),
       '/vue/plugin/': genSidebarConfig('vue插件', ['clipboard', 'vueCropper', 'html2canvas']),
-    }
+    },
+    // // 密钥
+    // keyPage: {
+    //   keys: ['c33367701511b4f6020ec61ded352059'], // 1.3.0 版本后需要设置为密文
+    //   color: '#42b983', // 登录页动画球的颜色
+    //   lineColor: '#42b983' // 登录页动画线的颜色
+    // }
   },
   // 语言
   locales: {

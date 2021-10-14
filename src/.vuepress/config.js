@@ -38,13 +38,15 @@ module.exports = {
         ]
       },
       {
-        text: 'Vue',
-        items: [
-          { text: 'vue-基础', link: '/vue/base/text'},
-          { text: 'vue-插件', link: '/vue/plugin/plugins'},
-          { text: 'vue-问题', link: '/vue/pro/problem'},
-          { text: 'vue-风格', link: '/vue/style/text'},
-        ]
+        text: '技术分类',
+          items: [
+            {
+              text: 'Vue', link: '/vue/base/text'
+            },
+            {
+              text: 'Uni-App', link: '/uni/page/uniIndex'
+            }
+          ]
       },
       {
         text: '常用网址',
@@ -70,10 +72,10 @@ module.exports = {
       '/share/element-ui/': genSidebarConfig('常用组件', ['use']),
       '/share/iview/': genSidebarConfig('常用组件', ['use', 'apiLoading']),
 
-      // vue相关
-      '/vue/base/': genSidebarConfig('vue基础概念', ['file']),
-      '/vue/pro/': genSidebarConfig('vue', ['vue', 'tes']),
-      '/vue/plugin/': genSidebarConfig('vue插件', ['clipboard', 'vueCropper', 'html2canvas']),
+      // 技术分类
+      '/vue/base/': genSidebarConfig('vue学习应用', ['file','vue','clipboard', 'vueCropper', 'html2canvas', 'text']),
+      '/uni/page/': genSidebarConfig('uni-app学习应用', ['testWay', 'ucharts'])
+      // 
     },
     // // 密钥
     // keyPage: {

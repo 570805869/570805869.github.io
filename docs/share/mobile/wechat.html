@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端性能优化实战分享 | 可爱的许荻荻</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="xd.ico">
+    <meta name="description" content="学习吗？一起呗～">
+    <meta name="theme-color" content="#3eaf7c">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.d3633e54.css" as="style"><link rel="preload" href="/docs/assets/js/app.9049e2a8.js" as="script"><link rel="preload" href="/docs/assets/js/3.da7480ae.js" as="script"><link rel="preload" href="/docs/assets/js/1.fab064b9.js" as="script"><link rel="preload" href="/docs/assets/js/47.a6368b41.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.7087d55a.js"><link rel="prefetch" href="/docs/assets/js/11.e4075874.js"><link rel="prefetch" href="/docs/assets/js/12.e97cd54d.js"><link rel="prefetch" href="/docs/assets/js/13.e08c0df5.js"><link rel="prefetch" href="/docs/assets/js/14.e12d2a53.js"><link rel="prefetch" href="/docs/assets/js/15.6a40752e.js"><link rel="prefetch" href="/docs/assets/js/16.e0a9eb71.js"><link rel="prefetch" href="/docs/assets/js/17.079252b5.js"><link rel="prefetch" href="/docs/assets/js/18.d8a6c764.js"><link rel="prefetch" href="/docs/assets/js/19.67f6d56c.js"><link rel="prefetch" href="/docs/assets/js/20.e7239aa9.js"><link rel="prefetch" href="/docs/assets/js/21.d0286215.js"><link rel="prefetch" href="/docs/assets/js/22.07a2acfa.js"><link rel="prefetch" href="/docs/assets/js/23.4e291d20.js"><link rel="prefetch" href="/docs/assets/js/24.02d8b967.js"><link rel="prefetch" href="/docs/assets/js/25.fb85f51a.js"><link rel="prefetch" href="/docs/assets/js/26.153b77a4.js"><link rel="prefetch" href="/docs/assets/js/27.310ca514.js"><link rel="prefetch" href="/docs/assets/js/28.5125a225.js"><link rel="prefetch" href="/docs/assets/js/29.8e5b075f.js"><link rel="prefetch" href="/docs/assets/js/30.5cfeaabb.js"><link rel="prefetch" href="/docs/assets/js/31.7c474451.js"><link rel="prefetch" href="/docs/assets/js/32.8f766e58.js"><link rel="prefetch" href="/docs/assets/js/33.fe8dbda1.js"><link rel="prefetch" href="/docs/assets/js/34.19964706.js"><link rel="prefetch" href="/docs/assets/js/35.27d87b1c.js"><link rel="prefetch" href="/docs/assets/js/36.e9d4c103.js"><link rel="prefetch" href="/docs/assets/js/37.ee7e6e8f.js"><link rel="prefetch" href="/docs/assets/js/38.83caca73.js"><link rel="prefetch" href="/docs/assets/js/39.76420822.js"><link rel="prefetch" href="/docs/assets/js/4.a65944c4.js"><link rel="prefetch" href="/docs/assets/js/40.30f4c083.js"><link rel="prefetch" href="/docs/assets/js/41.8cfe5291.js"><link rel="prefetch" href="/docs/assets/js/42.82920469.js"><link rel="prefetch" href="/docs/assets/js/43.89ffe865.js"><link rel="prefetch" href="/docs/assets/js/44.4a7dab75.js"><link rel="prefetch" href="/docs/assets/js/45.0566a857.js"><link rel="prefetch" href="/docs/assets/js/46.6689e7a8.js"><link rel="prefetch" href="/docs/assets/js/48.7e3bf89d.js"><link rel="prefetch" href="/docs/assets/js/49.8c323434.js"><link rel="prefetch" href="/docs/assets/js/5.7963623a.js"><link rel="prefetch" href="/docs/assets/js/50.84976551.js"><link rel="prefetch" href="/docs/assets/js/51.d609bc16.js"><link rel="prefetch" href="/docs/assets/js/52.60a78d2e.js"><link rel="prefetch" href="/docs/assets/js/53.645cf2bb.js"><link rel="prefetch" href="/docs/assets/js/54.299ea787.js"><link rel="prefetch" href="/docs/assets/js/55.dd33a8e9.js"><link rel="prefetch" href="/docs/assets/js/56.7945b492.js"><link rel="prefetch" href="/docs/assets/js/57.040705a8.js"><link rel="prefetch" href="/docs/assets/js/58.2a2232bf.js"><link rel="prefetch" href="/docs/assets/js/59.9f09c119.js"><link rel="prefetch" href="/docs/assets/js/6.fe5d3874.js"><link rel="prefetch" href="/docs/assets/js/60.43311ddd.js"><link rel="prefetch" href="/docs/assets/js/61.85683099.js"><link rel="prefetch" href="/docs/assets/js/62.34b22f2f.js"><link rel="prefetch" href="/docs/assets/js/63.bffd2af4.js"><link rel="prefetch" href="/docs/assets/js/64.2856b4d2.js"><link rel="prefetch" href="/docs/assets/js/65.ce7124bb.js"><link rel="prefetch" href="/docs/assets/js/66.8ef7a33e.js"><link rel="prefetch" href="/docs/assets/js/67.e625e195.js"><link rel="prefetch" href="/docs/assets/js/68.d7af0645.js"><link rel="prefetch" href="/docs/assets/js/7.c3aa0795.js"><link rel="prefetch" href="/docs/assets/js/8.bad90f01.js"><link rel="prefetch" href="/docs/assets/js/9.5ef36630.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.d3633e54.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-3def6117><div data-v-3def6117><div id="loader-wrapper" class="loading-wrapper" data-v-2c578df8 data-v-3def6117 data-v-3def6117><div class="loader-main" data-v-2c578df8><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div><div data-v-2c578df8></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-70a509e9 data-v-3def6117 data-v-3def6117><h3 class="title" data-v-70a509e9 data-v-70a509e9>可爱的许荻荻</h3> <p class="description" data-v-70a509e9 data-v-70a509e9>学习吗？一起呗～</p> <label id="box" class="inputBox" data-v-70a509e9 data-v-70a509e9><input type="password" value="" data-v-70a509e9> <span data-v-70a509e9>Konck! Knock!</span> <button data-v-70a509e9>OK</button></label> <div class="footer" data-v-70a509e9 data-v-70a509e9><span data-v-70a509e9><i class="iconfont reco-theme" data-v-70a509e9></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70a509e9>vuePress-theme-reco</a></span> <span data-v-70a509e9><i class="iconfont reco-copyright" data-v-70a509e9></i> <a data-v-70a509e9><span data-v-70a509e9>许荻荻的博客</span>
+            
+          <span data-v-70a509e9>2018 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-3def6117><header class="navbar" data-v-3def6117><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/img/me.jpeg" alt="可爱的许荻荻" class="logo"> <span class="site-name">可爱的许荻荻</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      常规操作
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/share/necessary/necessary-index.html" class="nav-link"><i class="undefined"></i>
+  必备技能
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/wepack-pro/webpack-index.html" class="nav-link"><i class="undefined"></i>
+  webpack学习
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/mobile/mobile-index.html" class="nav-link"><i class="undefined"></i>
+  移动端学习
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/en/en-index.html" class="nav-link"><i class="undefined"></i>
+  英文学习
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/code/code-index.html" class="nav-link"><i class="undefined"></i>
+  必备代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/link/doc.html" class="nav-link"><i class="undefined"></i>
+  文档集合
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/plugins/pluginIndex.html" class="nav-link"><i class="undefined"></i>
+  插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/element-ui/index.html" class="nav-link"><i class="undefined"></i>
+  element-ui
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/iview/index.html" class="nav-link"><i class="undefined"></i>
+  iview
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/interview/interview.html" class="nav-link"><i class="undefined"></i>
+  常备
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/necessary/coding.html" class="nav-link"><i class="undefined"></i>
+  coding部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      技术分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/vue/base/text.html" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/docs/uni/page/uniIndex.html" class="nav-link"><i class="undefined"></i>
+  Uni-App
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/url/fe.html" class="nav-link"><i class="undefined"></i>
+  常用网址
+</a></div><div class="nav-item"><a href="https://github.com/570805869" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-3def6117></div> <aside class="sidebar" data-v-3def6117><div class="personal-info-wrapper" data-v-1a7245e0 data-v-3def6117><img src="/docs/img/me.jpeg" alt="author-avatar" class="personal-img" data-v-1a7245e0> <h3 class="name" data-v-1a7245e0>
+    许荻荻的博客
+  </h3> <div class="num" data-v-1a7245e0><div data-v-1a7245e0><h3 data-v-1a7245e0>56</h3> <h6 data-v-1a7245e0>文章</h6></div> <div data-v-1a7245e0><h3 data-v-1a7245e0>8</h3> <h6 data-v-1a7245e0>标签</h6></div></div> <ul class="social-links" data-v-1a7245e0></ul> <hr data-v-1a7245e0></div> <nav class="nav-links"><div class="nav-item"><a href="/docs/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      常规操作
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/share/necessary/necessary-index.html" class="nav-link"><i class="undefined"></i>
+  必备技能
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/wepack-pro/webpack-index.html" class="nav-link"><i class="undefined"></i>
+  webpack学习
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/mobile/mobile-index.html" class="nav-link"><i class="undefined"></i>
+  移动端学习
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/en/en-index.html" class="nav-link"><i class="undefined"></i>
+  英文学习
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/code/code-index.html" class="nav-link"><i class="undefined"></i>
+  必备代码片段
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/link/doc.html" class="nav-link"><i class="undefined"></i>
+  文档集合
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/plugins/pluginIndex.html" class="nav-link"><i class="undefined"></i>
+  插件使用
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/element-ui/index.html" class="nav-link"><i class="undefined"></i>
+  element-ui
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/iview/index.html" class="nav-link"><i class="undefined"></i>
+  iview
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/interview/interview.html" class="nav-link"><i class="undefined"></i>
+  常备
+</a></li><li class="dropdown-item"><!----> <a href="/docs/share/necessary/coding.html" class="nav-link"><i class="undefined"></i>
+  coding部署
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      技术分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/vue/base/text.html" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/docs/uni/page/uniIndex.html" class="nav-link"><i class="undefined"></i>
+  Uni-App
+</a></li></ul></div></div><div class="nav-item"><a href="/docs/url/fe.html" class="nav-link"><i class="undefined"></i>
+  常用网址
+</a></div><div class="nav-item"><a href="https://github.com/570805869" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>移动端学习</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/share/mobile/wechat.html" aria-current="page" class="active sidebar-link">前端性能优化实战分享</a></li><li><a href="/docs/share/mobile/mobile-1.html" class="sidebar-link">移动端性能优化总结（一）</a></li><li><a href="/docs/share/mobile/mobile-2.html" class="sidebar-link">移动端性能优化总结（二）</a></li><li><a href="/docs/share/mobile/mobile-bug.html" class="sidebar-link">移动端偶遇BUG</a></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-70a509e9 data-v-3def6117><h3 class="title" data-v-70a509e9 data-v-70a509e9></h3> <!----> <label id="box" class="inputBox" data-v-70a509e9 data-v-70a509e9><input type="password" value="" data-v-70a509e9> <span data-v-70a509e9>Konck! Knock!</span> <button data-v-70a509e9>OK</button></label> <div class="footer" data-v-70a509e9 data-v-70a509e9><span data-v-70a509e9><i class="iconfont reco-theme" data-v-70a509e9></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-70a509e9>vuePress-theme-reco</a></span> <span data-v-70a509e9><i class="iconfont reco-copyright" data-v-70a509e9></i> <a data-v-70a509e9><span data-v-70a509e9>许荻荻的博客</span>
+            
+          <span data-v-70a509e9>2018 - </span>
+          2021
+        </a></span></div></div> <div data-v-3def6117><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">前端性能优化实战分享</h1> <div data-v-71eee331><i class="iconfont reco-account" data-v-71eee331><span data-v-71eee331>许荻荻的博客</span></i> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="前端性能优化实战分享"><a href="#前端性能优化实战分享" class="header-anchor">#</a> 前端性能优化实战分享</h1> <p>过去一段时间我参与了微信公众号的开发，遇到各种问题，总结一下，主要涉及微信jssdk（难点在于微信签名，签名后才能使用jssdk）、微信网页授权获取用户信息、微信公众账号支付这三个部分。</p> <h2 id="微信jssdk的使用"><a href="#微信jssdk的使用" class="header-anchor">#</a> 微信jssdk的使用</h2> <p>由于要使用微信jssdk需要在微信公众账号里边配置微信js安全域名，我们需要进入订阅号的开发者工具=》公众平台测试账号=》按照步骤扫二维码进入以下页面
+配置js接口安全域名（注意必须是外网可以访问的域名，测试号也可以是ip地址）
+因为使用微信jssdk需要签名，签名必须要后端支持，作为一名不会写后台代码的前端开发者来说，自己想测试一下jssdk的功能也是有办法可寻的（如果有后端人员愿意支持你，给你提供签名的接口也是可以的）。
+我来讲讲我初步学习使用jssdk的方式。
+1.在微信开发者文档
+https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421141115&amp;token=&amp;lang=zh_CN
+底部提供的链接
+http://demo.open.weixin.qq.com/jssdk/sample.zip
+下载实例代码，其中包含php、java、nodejs以及python的示例代码；我使用的是php的代码因为搭建服务比较简单，'修改sample.php页面，将测试号的appid\appsecret写到代码对应的位置，然后将要测试的代码房子wx.ready(function(){})里边就可以了。</p> <h2 id="微信网页授权-获取用户信息"><a href="#微信网页授权-获取用户信息" class="header-anchor">#</a> 微信网页授权，获取用户信息</h2> <p>在公众账号中配置授权回调域名
+通过微信的授权url，配置appid\回调url，授权后会跳转到回调url,回调的url上微信会自动加上一个code码，然后将code码传给后端，后端用code获取到openid（不通的授权方式获取的用户信息权限不一样）或其他用户信息返回给前端，授权成功</p> <h2 id="微信支付"><a href="#微信支付" class="header-anchor">#</a> 微信支付</h2> <p>申请微信公众账号支付，申请成功之后，配置支付授权目录（建议直接使用支付授权目录，不通过测试目录开发），支付授权目录要求如下（虽要求进去匹配，但实际开发过程中，支付页面是/cart/payment，但是只有配置/cart才生效，不知道为什么）</p> <p>将openid传给后端，后端返回timestamp、nonceStr、package、paySign信息，然后再前端调用一下jssdk(按文档要求需要签名后再调用，但实际测试签名失败调用此sdk也能成功)
+wx.chooseWXPay({
+timestamp: 0, // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付 后台生成签名使用的timeStamp字段名需大写其中的S字符
+nonceStr: '', // 支付签名随机串，不长于 32 位
+package: '', // 统一支付接口返回的prepay_id参数值，提交格式如：prepay_id=***）
+signType: '', // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
+paySign: '', // 支付签名
+success: function (res) {
+// 支付成功后的回调函数
+},
+cancle:function(res){
+//取消支付的回调函数
+},
+fail:function(res){
+//支付失败的回调函数
+}
+});</p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/docs/share/mobile/mobile-1.html">
+            移动端性能优化总结（一）
+          </a></span></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-65c007c6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a008c6ba data-v-a008c6ba><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a008c6ba><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a008c6ba></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a008c6ba></path></svg></div><canvas id="vuepress-canvas-ribbon"></canvas><div class="reco-bgm-panel" data-v-2940e5b8><audio id="bgm" src="https://assets.smallsunnyfox.com/music/3.mp3" data-v-2940e5b8></audio> <div class="reco-float-box" style="bottom:200px;z-index:999999;display:none;" data-v-2940e5b8 data-v-cc4d9216 data-v-2940e5b8><img src="https://assets.smallsunnyfox.com/music/3.jpg" data-v-2940e5b8></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-2940e5b8 data-v-cc4d9216 data-v-2940e5b8><div class="reco-bgm-cover" style="background-image:url(https://assets.smallsunnyfox.com/music/3.jpg);" data-v-2940e5b8><div class="mini-operation" style="display:none;" data-v-2940e5b8><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-2940e5b8></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-2940e5b8></i></div> <div class="falut-message" style="display:none;" data-v-2940e5b8>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-2940e5b8 data-v-cc4d9216 data-v-2940e5b8><div class="info-box" data-v-2940e5b8><i class="reco-bgm reco-bgm-music music" data-v-2940e5b8></i>用胳膊当枕头</div> <div class="info-box" data-v-2940e5b8><i class="reco-bgm reco-bgm-artist" data-v-2940e5b8></i>최낙타</div> <div class="reco-bgm-progress" data-v-2940e5b8><div class="progress-bar" data-v-2940e5b8><div class="bar" data-v-2940e5b8></div></div></div> <div class="reco-bgm-operation" data-v-2940e5b8><i class="reco-bgm reco-bgm-last last" data-v-2940e5b8></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-2940e5b8></i> <i class="reco-bgm reco-bgm-play play" data-v-2940e5b8></i> <i class="reco-bgm reco-bgm-next next" data-v-2940e5b8></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-2940e5b8></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-2940e5b8></i> <div class="volume-bar" data-v-2940e5b8><div class="bar" data-v-2940e5b8></div></div></div></div> <div class="reco-bgm-left-box" data-v-2940e5b8 data-v-cc4d9216 data-v-2940e5b8><i class="reco-bgm reco-bgm-left" data-v-2940e5b8></i></div></div></div><canvas id="vuepress-canvas-cursor"></canvas></div></div>
+    <script src="/docs/assets/js/app.9049e2a8.js" defer></script><script src="/docs/assets/js/3.da7480ae.js" defer></script><script src="/docs/assets/js/1.fab064b9.js" defer></script><script src="/docs/assets/js/47.a6368b41.js" defer></script>
+  </body>
+</html>

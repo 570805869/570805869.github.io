@@ -8,7 +8,7 @@ cd blog && npm install
 // 启动项目
 npm start
 ```
-打开浏览器，然后通过 http://localhost:8080/blog/ 访问
+打开浏览器，然后通过 http://localhost:8080/ 访问
 
 ## 部署
 在根目录下执行：
@@ -16,4 +16,4 @@ npm start
 npm run pd
 ```
 访问地址：
-[http://www.xudidi.vip/blog/](http://www.xudidi.vip/blog/)
+[http://www.xudidi.vip/](http://www.xudidi.vip/)

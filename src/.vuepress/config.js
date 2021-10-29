@@ -74,7 +74,7 @@ module.exports = {
       '/share/iview/': genSidebarConfig('常用组件', ['use', 'apiLoading']),
 
       // 技术分类
-      '/vue/base/': genSidebarConfig('vue学习应用', ['file','vue','clipboard', 'vueCropper', 'html2canvas', 'text']),
+      '/vue/base/': genSidebarConfig('vue学习应用', ['file','vue','clipboard', 'vueCropper', 'html2canvas', 'record', 'text']),
       '/uni/page/': genSidebarConfig('uni-app学习应用', ['testWay', 'ucharts'])
       // 
     },

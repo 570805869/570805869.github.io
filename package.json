@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "vuepress dev src --temp .temp",
-    "pd": "rimraf docs && vuepress build src",
+    "pd": "rimraf docs && vuepress build src"
   },
   "keywords": [],
   "author": "",

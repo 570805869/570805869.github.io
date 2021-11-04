@@ -31,8 +31,6 @@ module.exports = {
           { text: '必备代码片段', link: '/share/code/code-index'},
           { text: '文档集合', link: '/share/link/doc'},
           { text: '插件使用', link: '/share/plugins/pluginIndex'},
-          { text: 'element-ui', link: '/share/element-ui/index'},
-          { text: 'iview', link: '/share/iview/index'},
           { text: '常备', link: '/share/interview/interview'},
           { text: 'coding部署', link: '/share/necessary/coding'},
 
@@ -46,7 +44,13 @@ module.exports = {
             },
             {
               text: 'Uni-App', link: '/uni/page/uniIndex'
-            }
+            },
+            { 
+                text: 'Element-ui', link: '/share/element-ui/index'
+            },
+            { 
+                text: 'Iview-ui', link: '/share/iview/index'
+            },
           ]
       },
       {
@@ -75,7 +79,9 @@ module.exports = {
 
       // 技术分类
       '/vue/base/': genSidebarConfig('vue学习应用', ['file','vue','clipboard', 'vueCropper', 'html2canvas', 'record', 'text']),
-      '/uni/page/': genSidebarConfig('uni-app学习应用', ['testWay', 'ucharts'])
+      '/uni/page/': genSidebarConfig('uni-app学习应用', ['testWay', 'ucharts']),
+      '/share/element-ui/': genSidebarConfig('ElementUi使用心得', ['tableFixHead', 'tableColspan','select', 'upload']),
+      '/share/iview/': genSidebarConfig('IviewUi使用心得', ['testWay', 'ucharts'])
       // 
     },
     // // 密钥

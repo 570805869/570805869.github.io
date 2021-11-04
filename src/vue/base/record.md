@@ -438,7 +438,7 @@ export default {
                     let curVideoObj = {
                         resBlob : res,//此处可以获取音频源文件(res)
                         url: URL.createObjectURL(res),
-                        videoTime: this.recorderTime
+                        videoTime: this.toNormalTime(this.recorderTime) // 9 -> 0:09
                     }
                     this.handleClose(curVideoObj)
                     this.resitCoutdown();
@@ -447,6 +447,12 @@ export default {
                     console.log(e)
                 }
             });
+        },
+        toNormalTime(time) {
+            let minutes = Math.floor(time / 60);
+            let seconds = Math.floor(time % 60);
+            let msg = minutes + ":" + (seconds >= 10 ? seconds : "0"+seconds) + "";
+            return msg
         },
         handleClose(videoObj) {
             this.$emit('closeRecord' , videoObj)

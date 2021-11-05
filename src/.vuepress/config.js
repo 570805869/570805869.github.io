@@ -74,14 +74,14 @@ module.exports = {
       '/scratch/': genSidebarConfig('深入scratch', ['links', '1', 'sb3']),
       '/share/code/': genSidebarConfig('必备代码片段', ['js', 'style']),
       '/share/plugins/': genSidebarConfig('插件使用', ['pdfjs']),
-      '/share/element-ui/': genSidebarConfig('常用组件', ['use']),
-      '/share/iview/': genSidebarConfig('常用组件', ['use', 'apiLoading']),
+    //   '/share/element-ui/': genSidebarConfig('常用组件', ['use']),
+    //   '/share/iview/': genSidebarConfig('常用组件', ['use', 'apiLoading']),
 
       // 技术分类
       '/vue/base/': genSidebarConfig('vue学习应用', ['file','vue','clipboard', 'vueCropper', 'html2canvas', 'record', 'text']),
       '/uni/page/': genSidebarConfig('uni-app学习应用', ['testWay', 'ucharts']),
       '/share/element-ui/': genSidebarConfig('ElementUi使用心得', ['tableFixHead', 'tableColspan','select', 'upload']),
-      '/share/iview/': genSidebarConfig('IviewUi使用心得', ['testWay', 'ucharts'])
+      '/share/iview/': genSidebarConfig('IviewUi使用心得', ['use', 'apiLoading'])
       // 
     },
     // // 密钥

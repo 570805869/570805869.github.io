@@ -13,7 +13,7 @@ npm start
 ## 部署
 在根目录下执行：
 ```
-npm run pd
+npm run pd(集成命令)
 ```
 访问地址：
 [http://www.xudidi.vip/](http://www.xudidi.vip/)

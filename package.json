@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "vuepress dev src --temp .temp",
-    "pd": "rimraf docs && vuepress build src"
+    "pd": "rimraf docs && vuepress build src && sudo npm run pcf",
+    "pcf": "cp -r ./CNAME ./docs && npm run add",
+    "add": "git add . && git commit -m 'refresh' && git pull && git push"
   },
   "keywords": [],
   "author": "",

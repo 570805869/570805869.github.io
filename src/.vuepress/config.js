@@ -31,9 +31,6 @@ module.exports = {
           { text: '必备代码片段', link: '/share/code/code-index'},
           { text: '文档集合', link: '/share/link/doc'},
           { text: '插件使用', link: '/share/plugins/pluginIndex'},
-          { text: '常备', link: '/share/interview/interview'},
-          { text: 'coding部署', link: '/share/necessary/coding'},
-
         ]
       },
       {
@@ -51,6 +48,9 @@ module.exports = {
             { 
                 text: 'Iview-ui', link: '/share/iview/index'
             },
+            { 
+                text: 'TypeScript', link: '/share/ts/index'
+            },
           ]
       },
       {
@@ -64,7 +64,7 @@ module.exports = {
     ],
     sidebar: {
       '/share/wepack-pro/': genSidebarConfig('webpack学习', ['webpack-note', 'webpack-deep', 'webpack-pro']),
-      '/share/necessary/': genSidebarConfig('必备技能', ['env', 'eslint', 'javascript-basic', 'md', 'opt', 'problem', 'coding']),
+      '/share/necessary/': genSidebarConfig('必备技能', ['env', 'eslint', 'javascript-basic', 'md', 'opt', 'problem', 'coding', 'lighthouse', 'git']),
       '/share/mobile/': genSidebarConfig('移动端学习', ['wechat', 'mobile-1', 'mobile-2', 'mobile-bug']),
       '/share/en/': genSidebarConfig('英文学习', ['webpack', 'npm', 'skulpt', 'ecma', 'scratch', 'ecma-translate']),
       '/share/desktop/': genSidebarConfig('桌面应用', ['contrast']),
@@ -81,7 +81,8 @@ module.exports = {
       '/vue/base/': genSidebarConfig('vue学习应用', ['file','vue','clipboard', 'vueCropper', 'html2canvas', 'record', 'text']),
       '/uni/page/': genSidebarConfig('uni-app学习应用', ['testWay', 'ucharts']),
       '/share/element-ui/': genSidebarConfig('ElementUi使用心得', ['tableFixHead', 'tableColspan','select', 'upload']),
-      '/share/iview/': genSidebarConfig('IviewUi使用心得', ['use', 'apiLoading'])
+      '/share/iview/': genSidebarConfig('IviewUi使用心得', ['use', 'apiLoading']),
+      '/share/ts/': genSidebarConfig('IviewUi使用心得', ['learn'])
       // 
     },
     // // 密钥

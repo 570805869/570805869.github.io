@@ -82,7 +82,7 @@ module.exports = {
       '/uni/page/': genSidebarConfig('uni-app学习应用', ['testWay', 'ucharts']),
       '/share/element-ui/': genSidebarConfig('ElementUi使用心得', ['tableFixHead', 'tableColspan','select', 'upload']),
       '/share/iview/': genSidebarConfig('IviewUi使用心得', ['use', 'apiLoading']),
-      '/share/ts/': genSidebarConfig('IviewUi使用心得', ['learn'])
+      '/share/ts/': genSidebarConfig('Typescript', ['basicType','learn', 'typeInserch', 'changeable','function', 'interface', 'class', 'tuple', 'unionTypes', 'stringType', 'difType', 'generics', 'arr','declareFile', 'namespace'])
       // 
     },
     // // 密钥

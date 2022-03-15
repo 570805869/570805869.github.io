@@ -1,6 +1,8 @@
 ---
 title: Ts-数组
 date: 2022-03-09
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

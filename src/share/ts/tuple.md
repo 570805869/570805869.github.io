@@ -1,6 +1,8 @@
 ---
 title: Ts-元组
 date: 2022-03-04
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

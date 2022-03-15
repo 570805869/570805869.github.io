@@ -1,6 +1,8 @@
 ---
 title: Ts-泛型
 date: 2022-03-08
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

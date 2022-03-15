@@ -1,6 +1,8 @@
 ---
 title: TypeScript
 date: 2022-02-25
+sidebar: auto
+collapsable: true
 categories:
  - git
 tags:

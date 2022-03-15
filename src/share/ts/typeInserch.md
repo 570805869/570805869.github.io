@@ -1,6 +1,8 @@
 ---
 title: Ts-类型推论/断言
 date: 2022-02-27
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

@@ -1,6 +1,8 @@
 ---
 title: Ts-基础类型
 date: 2022-02-25
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

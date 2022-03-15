@@ -1,6 +1,8 @@
 ---
 title: Ts-交叉类型
 date: 2022-03-07
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

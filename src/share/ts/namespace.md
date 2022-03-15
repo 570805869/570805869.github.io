@@ -1,6 +1,8 @@
 ---
 title: Ts-命名空间
 date: 2022-02-12
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

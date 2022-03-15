@@ -1,6 +1,8 @@
 ---
 title: Ts-内置对象
 date: 2022-02-28
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

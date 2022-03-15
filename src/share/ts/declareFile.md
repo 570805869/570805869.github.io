@@ -1,6 +1,8 @@
 ---
 title: Ts-声明文件
 date: 2022-03-11
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

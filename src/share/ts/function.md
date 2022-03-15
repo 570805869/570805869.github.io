@@ -1,6 +1,8 @@
 ---
 title: Ts-函数
 date: 2022-03-01
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

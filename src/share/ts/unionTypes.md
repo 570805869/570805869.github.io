@@ -1,6 +1,8 @@
 ---
 title: Ts-联合类型
 date: 2022-03-05
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

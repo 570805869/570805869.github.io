@@ -1,6 +1,8 @@
 ---
 title: Ts-字符串字面量类型
 date: 2022-03-06
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

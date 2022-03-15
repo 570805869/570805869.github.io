@@ -1,6 +1,8 @@
 ---
 title: Ts-接口
 date: 2022-03-02
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:

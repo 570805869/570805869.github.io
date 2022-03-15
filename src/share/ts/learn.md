@@ -1,6 +1,8 @@
 ---
 title: Ts-枚举/常数枚举
 date: 2022-02-26
+sidebar: auto
+collapsable: true
 categories:
  - ts
 tags:
